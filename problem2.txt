@@ -1,0 +1,2 @@
+In Python, if the function overloading called itself because of the code you wrote, you would get a Maximum Recursion Depth error. I would think the same can be said for C++. You are tying to copy the class by using the copy constructor that calls the incorrect copy constructor you just wrote. So, I would get a run-time error ( Segmentation Fault )
+
