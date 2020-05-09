@@ -1,6 +1,9 @@
-1. If the class ABC does not deal with the deletion of the dynamic allocated memory then we would need to implement the destructor. It would be OK to leave it out if there is no where in your code that you copy the contents or assign to a new variable.  
+1. If the class ABC does not deal with the deletion of the dynamic allocated memory then we would need to implement the destructor. It would be OK to leave it out if there is no where in your code that you copy the contents of the dynamic allocated portion or assign to a new variable.  
+
 
 2.If you want to use the copy assignment statement, you will need to implement a copy constructor, so you can create a new copy ( and have the destructor deal with the clean up). Since it introduces the risk of two objects  pointing to the same memory location by mistake instead of each having their own copies, we would implement the copy constructor. The copy constructor, however, will not be needed if we did not introduce the need to make copies and assignments in our code.
 
 
 3. If you had to reassign the object (THRU COPY Assignment ) then we would need to implement the proper assignment-overloading. If you always used the copy Initialization then you would be good and not needing the assignment operator overloading.
+
+
